@@ -23,7 +23,22 @@
 4. to test the parsing log file, place the file in the /logs directory under the name logs.txt
 
 
-5. finally, we can run the parser
+5. sample content of log file
+
+```
+USER-SERVICE - - [17/Aug/2021:09:21:53 +0000] "POST /users HTTP/1.1" 201
+USER-SERVICE - - [17/Aug/2021:09:21:54 +0000] "POST /users HTTP/1.1" 400
+INVOICE-SERVICE - - [17/Aug/2021:09:21:55 +0000] "POST /invoices HTTP/1.1" 201
+USER-SERVICE - - [17/Aug/2021:09:21:56 +0000] "POST /users HTTP/1.1" 201
+USER-SERVICE - - [17/Aug/2021:09:21:57 +0000] "POST /users HTTP/1.1" 201
+INVOICE-SERVICE - - [17/Aug/2021:09:22:58 +0000] "POST /invoices HTTP/1.1" 201
+INVOICE-SERVICE - - [17/Aug/2021:09:22:59 +0000] "POST /invoices HTTP/1.1" 400
+INVOICE-SERVICE - - [17/Aug/2021:09:23:53 +0000] "POST /invoices HTTP/1.1" 201
+USER-SERVICE - - [17/Aug/2021:09:23:54 +0000] "POST /users HTTP/1.1" 400
+USER-SERVICE - - [17/Aug/2021:09:23:55 +0000] "POST /users HTTP/1.1" 201
+```
+
+6. finally, we can run the parser
 
 ```
   php bin/console app:parse-log-file
