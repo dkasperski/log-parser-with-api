@@ -4,6 +4,19 @@
 # Put parameters here that don't need to change on each machine where the app is deployed
 # https://symfony.com/doc/current/best_practices.html#use-parameters-for-application-configuration
 parameters:
+    app.single_line_log_file_format: '%s - - %d %ms %m %p %hs %c'
+    app.log_file_path: 'logs/logs.txt'
+
+#    USER-SERVICE - - [17/Aug/2021:09:21:53 +0000] "POST /users HTTP/1.1" 201
+#    %s - - [%d %ms] "%m %p %hs %c
+#
+#    '%s' => '(?<service>\S+)',
+#    '%d' => '\[(?<date>\S+)',
+#    '%ms' => '(?<miliseconds>\S+)',
+#    '%m' => '\"(?<method>\S+)',
+#    '%p' => '(?<path>\S+)',
+#    '%hs' => '(?<http_standard>\S+)',
+#    '%c' => '(?<code>\S+)',
 
 services:
     # default configuration for services in *this* file

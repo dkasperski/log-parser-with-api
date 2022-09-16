@@ -1,3 +1,3 @@
-#index:
-#    path: /
-#    controller: App\Controller\DefaultController::index
+legal_one_log_api_annotations:
+    resource: ../src/LegalOne/LogApiBundle/Controller/Api/
+    type:     annotation
